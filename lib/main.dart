@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'splash/splash_screen.dart';
-import 'messages/messages_screen.dart';
+import 'splash/splash_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       // home: const SplashScreen  (),
-      home: MessagesScreen (),
+      home: const SplashScreen (),
     );
   }
 }
