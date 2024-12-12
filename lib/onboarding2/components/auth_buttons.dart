@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../signup/sign_up_screen.dart';
+import '../../signin/login_screen.dart';
 
 class AuthButtons extends StatelessWidget {
   const AuthButtons({super.key});
@@ -12,7 +14,11 @@ class AuthButtons extends StatelessWidget {
           height: 56,
           child: ElevatedButton(
             onPressed: () {
-              // Add sign in logic here
+               // Navigate to BasicInformationScreen when button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue[700],
@@ -36,7 +42,11 @@ class AuthButtons extends StatelessWidget {
           height: 56,
           child: OutlinedButton(
             onPressed: () {
-              // Add create account logic here
+              // Navigate to BasicInformationScreen when button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                  );
             },
             style: OutlinedButton.styleFrom(
               side: BorderSide(color: Colors.grey[300]!),

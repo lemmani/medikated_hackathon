@@ -56,15 +56,15 @@ class MedicationSection extends StatelessWidget {
             border: Border.all(color: Colors.grey.shade300),
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 'Medication 1',
                 style: TextStyle(fontSize: 16),
               ),
               Row(
-                children: const [
+                children: [
                   Text(
                     'How Long',
                     style: TextStyle(fontSize: 16),

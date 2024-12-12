@@ -29,6 +29,7 @@ class VisitReasonCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
+                // ignore: deprecated_member_use
                 color: iconColor.withOpacity(0.1),
                 shape: BoxShape.circle,
               ),

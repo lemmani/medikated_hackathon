@@ -9,7 +9,7 @@ class LogoHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(
-          'assets/images/medikated_logo.png',
+          '/Users/emmanuelfrancislahai/Desktop/MEDIKATED_HACKATHON/medikated_hackathon/assets/images/medikated_logo.png',
           height: 80,
           fit: BoxFit.contain,
         ),

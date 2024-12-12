@@ -22,8 +22,8 @@ class PopularDoctors extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {},
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
                     Text(
                       'See all',
                       style: TextStyle(color: Colors.blue),
@@ -35,10 +35,10 @@ class PopularDoctors extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          SingleChildScrollView(
+          const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: const [
+              children: [
                 DoctorCard(
                   image: 'assets/doctor1.jpg',
                   name: "Dr. Mi'keila Dione",

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import '../../search/search_screen.dart'; // Import the SearchScreen
+import '../../calender_main/calendar_screen.dart';
+import '../../messages/messages_screen.dart';
+import '../../profile/profile_screen.dart';
+import '../../home/home_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
-  final int selectedIndex;
-
-  const CustomBottomNavBar({
-    super.key,
-    required this.selectedIndex,
-  });
+  const CustomBottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
         border: Border(
           top: BorderSide(
             color: Colors.grey.shade200,
@@ -21,10 +20,47 @@ class CustomBottomNavBar extends StatelessWidget {
         ),
       ),
       child: BottomNavigationBar(
-        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color(0xFF0052FF),
         unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
+        currentIndex: 4,
+        onTap: (index) {
+          // Handle navigation based on the tapped index
+          switch (index) {
+            case 0: // Search icon is at index 1
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ),
+              );
+            case 1: // Search icon is at index 1
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SearchScreen(),
+                ),
+              );
+              case 2: // Search icon is at index 1
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CalendarScreen(),
+                ),
+              );
+              case 3: // Search icon is at index 1
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) =>  MessagesScreen(),
+                ),
+              );
+               case 4: // Search icon is at index 1
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ProfileScreen(),
+                ),
+              );
+              break;
+            // You can add more cases for other navigation items if needed
+          }
+        },
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

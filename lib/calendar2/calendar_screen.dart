@@ -66,7 +66,7 @@ class CalendarScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavBar(),
+       bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

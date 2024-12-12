@@ -9,28 +9,28 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             children: [
-              const SizedBox(height: 40),
-              const DoctorIllustration(),
-              const SizedBox(height: 20),
-              const PageIndicator(
+              SizedBox(height: 40),
+              DoctorIllustration(),
+              SizedBox(height: 20),
+              PageIndicator(
                 totalDots: 2,
                 currentIndex: 0,
               ),
-              const SizedBox(height: 32),
-              const ContentSection(
+              SizedBox(height: 32),
+              ContentSection(
                 title: 'Video consult top doctors from the comfort of your home.',
                 subtitle: 'These are Specialists in their respective fields, which includes Brain & Nervous system',
               ),
-              const Spacer(),
-              const SignInButton(),
-              const SizedBox(height: 48),
+              Spacer(),
+              SignInButton(),
+              SizedBox(height: 48),
             ],
           ),
         ),

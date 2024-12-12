@@ -16,8 +16,8 @@ class SearchFilterSection extends StatelessWidget {
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Row(
-              children: const [
+            child: const Row(
+              children: [
                 Icon(Icons.search, color: Colors.grey),
                 SizedBox(width: 8),
                 Expanded(
@@ -37,19 +37,19 @@ class SearchFilterSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                FilterChip(
+                const FilterChip(
                   label: "Available Today",
                   isSelected: true,
                   isPrimary: true,
                 ),
                 const SizedBox(width: 8),
-                FilterChip(
+                const FilterChip(
                   label: "In-Person",
                   isSelected: false,
                   isPrimary: false,
                 ),
                 const SizedBox(width: 8),
-                FilterChip(
+                const FilterChip(
                   label: "Via Text",
                   isSelected: false,
                   isPrimary: false,

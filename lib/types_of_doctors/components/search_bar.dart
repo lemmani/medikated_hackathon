@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../choose_doctor/medical_officers_screen.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({super.key});
@@ -12,6 +13,7 @@ class CustomSearchBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
+            // ignore: deprecated_member_use
             color: Colors.grey.withOpacity(0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -33,7 +35,12 @@ class CustomSearchBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.close, color: Colors.grey),
-            onPressed: () {},
+            onPressed: () {
+                Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const MedicalOfficersScreen  ()),
+                      ); 
+            },
           ),
         ],
       ),

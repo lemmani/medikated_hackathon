@@ -43,11 +43,11 @@ class PatientDetailsScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
                       child: Row(
                         children: [
-                          const Expanded(
+                          Expanded(
                             child: MetricCard(
                               title: 'Blood Group',
                               value: 'A+',
@@ -55,13 +55,13 @@ class PatientDetailsScreen extends StatelessWidget {
                               icon: Icons.opacity,
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                           Expanded(
                             child: MetricCard(
                               title: 'Weight',
                               value: '103',
                               unit: 'lbs',
-                              color: const Color(0xFF0052FF),
+                              color: Color(0xFF0052FF),
                               icon: Icons.fitness_center,
                             ),
                           ),
@@ -74,10 +74,11 @@ class PatientDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const CustomBottomNavBar(selectedIndex: 4),
+            
           ],
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

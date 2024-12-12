@@ -10,27 +10,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    HeaderSection(userName: "Gifty"),
-                    AppointmentsSection(),
-                    GeneralNeedsSection(),
-                    SpecificNeedsSection(),
-                  ],
-                ),
-              ),
-            ),
-            const CustomBottomNavBar(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+               HeaderSection(userName: "Gifty"),
+               AppointmentsSection(),
+               GeneralNeedsSection(),
+               SpecificNeedsSection(),
+              // Add extra content to force scrolling
+            ],
+          ),
         ),
       ),
+      bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }

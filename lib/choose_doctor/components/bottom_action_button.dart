@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../calendar/book_appointment_screen.dart';
 
 class BottomActionButton extends StatelessWidget {
   const BottomActionButton({super.key});
@@ -16,7 +17,12 @@ class BottomActionButton extends StatelessWidget {
         ),
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+           Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BookAppointmentScreen  ()),
+                      ); 
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFF0052FF),
           padding: const EdgeInsets.symmetric(vertical: 16),
@@ -24,9 +30,9 @@ class BottomActionButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Text(
               'Next',
               style: TextStyle(

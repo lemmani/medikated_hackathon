@@ -24,10 +24,10 @@ class SymptomsChecklist extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        Wrap(
+        const Wrap(
           spacing: 16,
           runSpacing: 8,
-          children: const [
+          children: [
             SymptomCheckbox(label: 'Difficulty sleeping'),
             SymptomCheckbox(label: 'Fatigue / weakness'),
             SymptomCheckbox(label: 'Fever'),
@@ -45,10 +45,10 @@ class SymptomsChecklist extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        Wrap(
+        const Wrap(
           spacing: 16,
           runSpacing: 8,
-          children: const [
+          children: [
             SymptomCheckbox(label: 'Congestions'),
             SymptomCheckbox(label: 'Ear pain'),
             SymptomCheckbox(label: 'Eye redness'),

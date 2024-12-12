@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/appointment.dart';
+import '../../calendar2/calendar_screen.dart';
 
 class TimeSlots extends StatelessWidget {
   final List<Appointment> appointments;
@@ -69,23 +70,33 @@ class TimeSlot extends StatelessWidget {
           ),
           if (appointment.doctor.isNotEmpty)
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.only(left: 8),
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF0052FF).withOpacity(0.1),
-                  border: Border(
-                    left: BorderSide(
-                      color: const Color(0xFF0052FF),
-                      width: 4,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const CalendarScreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    // ignore: deprecated_member_use
+                    color: const Color(0xFF0052FF).withOpacity(0.1),
+                    border: const Border(
+                      left: BorderSide(
+                        color: Color(0xFF0052FF),
+                        width: 4,
+                      ),
                     ),
                   ),
-                ),
-                child: Text(
-                  'Appointment with ${appointment.doctor}',
-                  style: const TextStyle(
-                    color: Color(0xFF0052FF),
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    'Appointment with ${appointment.doctor}',
+                    style: const TextStyle(
+                      color: Color(0xFF0052FF),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),

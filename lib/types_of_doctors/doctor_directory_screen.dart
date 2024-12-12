@@ -9,18 +9,18 @@ class DoctorDirectoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(16.0),
               child: CustomSearchBar(),
             ),
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  children: const [
+                  children: [
                     PopularDoctors(),
                     SizedBox(height: 24),
                     FrequentlyUsedCaders(),

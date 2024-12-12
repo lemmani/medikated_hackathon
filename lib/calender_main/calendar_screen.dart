@@ -55,10 +55,10 @@ class CalendarScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const CustomBottomNavBar(selectedIndex: 2),
           ],
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavBar(),
     );
   }
 }

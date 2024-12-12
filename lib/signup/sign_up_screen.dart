@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'components/logo_widget.dart';
 import 'components/custom_text_field.dart';
+import '../signup_details/basic_information_screen.dart';  // Import the BasicInformationScreen
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -45,9 +46,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const SizedBox(height: 32),
               CustomTextField(
                 controller: _emailController,
-                label: 'Email',
-                hintText: 'example@email.com',
-                prefixIcon: Icons.email_outlined,
+                label: 'Phone Number',
+                hintText: '+23278039048',
+                prefixIcon: Icons.phone,
               ),
               const SizedBox(height: 16),
               CustomTextField(
@@ -65,7 +66,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigate to BasicInformationScreen when button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BasicInformationScreen()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0052FF),
                   padding: const EdgeInsets.symmetric(vertical: 16),
@@ -78,6 +85,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white, // Text color is white
                   ),
                 ),
               ),

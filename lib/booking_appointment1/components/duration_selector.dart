@@ -37,8 +37,8 @@ class DurationSelector extends StatelessWidget {
                 border: Border.all(color: Colors.grey.shade300),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Row(
-                children: const [
+              child: const Row(
+                children: [
                   Text(
                     'Days',
                     style: TextStyle(fontSize: 16),

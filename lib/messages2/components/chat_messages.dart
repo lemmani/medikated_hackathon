@@ -19,7 +19,7 @@ class ChatMessages extends StatelessWidget {
         itemCount: messages.length + 1, // +1 for the "Now" divider
         itemBuilder: (context, index) {
           if (index == messages.length - 1) {
-            return Column(
+            return const Column(
               children: [
                 SizedBox(height: 16),
                 TimeDivider(text: 'Now'),

@@ -9,28 +9,28 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
             children: [
-              const SizedBox(height: 60),
-              const ClockIllustration(),
-              const SizedBox(height: 32),
-              const PageIndicator(
+              SizedBox(height: 60),
+              ClockIllustration(),
+              SizedBox(height: 32),
+              PageIndicator(
                 totalDots: 2,
                 currentIndex: 1,
               ),
-              const SizedBox(height: 32),
-              const ContentSection(
+              SizedBox(height: 32),
+              ContentSection(
                 title: 'Communicate in the best & effective way possible.',
                 subtitle: 'Time & health are two precious assets that we don\'t compromise on.',
               ),
-              const Spacer(),
-              const AuthButtons(),
-              const SizedBox(height: 48),
+              Spacer(),
+              AuthButtons(),
+              SizedBox(height: 48),
             ],
           ),
         ),

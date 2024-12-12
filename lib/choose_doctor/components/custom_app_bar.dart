@@ -24,8 +24,8 @@ class CustomAppBar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Row(
-              children: const [
+            child: const Row(
+              children: [
                 Icon(
                   Icons.arrow_back_ios,
                   size: 18,

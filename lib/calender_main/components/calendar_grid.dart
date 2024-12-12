@@ -14,13 +14,13 @@ class CalendarGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
+            children: [
               WeekDayLabel('S'),
               WeekDayLabel('M'),
               WeekDayLabel('T'),
@@ -30,7 +30,7 @@ class CalendarGrid extends StatelessWidget {
               WeekDayLabel('S'),
             ],
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -43,7 +43,7 @@ class CalendarGrid extends StatelessWidget {
               DayCell(day: 24, isSelected: false),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
         ],
       ),
     );

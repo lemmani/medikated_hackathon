@@ -30,7 +30,7 @@ class _DatePickerFieldState extends State<DatePickerField> {
             Expanded(
               flex: 2,
               child: _buildDropdown(
-                hint: 'Month',
+                hint: 'M',
                 value: _month,
                 items: List.generate(12, (index) => (index + 1).toString()),
                 onChanged: (value) => setState(() => _month = value),
@@ -39,7 +39,7 @@ class _DatePickerFieldState extends State<DatePickerField> {
             const SizedBox(width: 8),
             Expanded(
               child: _buildDropdown(
-                hint: 'Day',
+                hint: 'D',
                 value: _day,
                 items: List.generate(31, (index) => (index + 1).toString()),
                 onChanged: (value) => setState(() => _day = value),
@@ -49,7 +49,7 @@ class _DatePickerFieldState extends State<DatePickerField> {
             Expanded(
               flex: 2,
               child: _buildDropdown(
-                hint: 'Year',
+                hint: 'Y',
                 value: _year,
                 items: List.generate(100, (index) => (2024 - index).toString()),
                 onChanged: (value) => setState(() => _year = value),

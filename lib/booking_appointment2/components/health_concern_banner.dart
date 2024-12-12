@@ -11,8 +11,8 @@ class HealthConcernBanner extends StatelessWidget {
         color: const Color(0xFFFFEBEE),
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Row(
-        children: const [
+      child: const Row(
+        children: [
           Icon(
             Icons.local_hospital,
             color: Colors.red,

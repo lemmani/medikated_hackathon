@@ -3,6 +3,7 @@ import 'components/custom_text_field.dart';
 import 'components/date_picker_field.dart';
 import 'components/phone_number_field.dart';
 import 'components/gender_selector.dart';
+import '../home/home_screen.dart';
 
 class BasicInformationScreen extends StatefulWidget {
   const BasicInformationScreen({super.key});
@@ -69,7 +70,13 @@ class _BasicInformationScreenState extends State<BasicInformationScreen> {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  // Navigate to BasicInformationScreen when button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0052FF),
                   padding: const EdgeInsets.symmetric(vertical: 16),
@@ -77,11 +84,12 @@ class _BasicInformationScreenState extends State<BasicInformationScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: const Text(
+               child: const Text(
                   'Continue',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white, // Text color is white
                   ),
                 ),
               ),

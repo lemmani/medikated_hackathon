@@ -4,6 +4,7 @@ import 'components/order_summary.dart';
 import 'components/payment_form.dart';
 import 'components/payment_methods.dart';
 import 'components/insurance_section.dart';
+import '../virtual_meeting/virtual_meeting_page.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -20,6 +21,7 @@ class PaymentScreen extends StatelessWidget {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
+                    // ignore: deprecated_member_use
                     color: Colors.grey.withOpacity(0.1),
                     blurRadius: 4,
                     offset: const Offset(0, 2),
@@ -94,7 +96,25 @@ class PaymentScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Dialog(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: VirtualMeetingPage(
+                                    onScheduleAppointment: () {
+                                      // Close the dialog
+                                      Navigator.of(context).pop();
+                                      // Add any additional navigation or actions here if needed
+                                    },
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green,
                             padding: const EdgeInsets.symmetric(vertical: 16),
@@ -103,7 +123,7 @@ class PaymentScreen extends StatelessWidget {
                             ),
                           ),
                           child: const Text(
-                            'Pay ₦5,700',
+                            'Pay Le5,700',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,

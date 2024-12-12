@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'components/review_header.dart';
 import 'components/health_concern_banner.dart';
 import 'components/info_section.dart';
+import '../booking_appoinment3.dart/payment_screen.dart';
 
 class ReviewProfileScreen extends StatelessWidget {
   const ReviewProfileScreen({super.key});
@@ -62,7 +63,12 @@ class ReviewProfileScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                             Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const PaymentScreen  ()),
+                          );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
                             padding: const EdgeInsets.symmetric(vertical: 16),

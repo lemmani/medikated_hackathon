@@ -12,6 +12,7 @@ class TodayAppointment extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
+            // ignore: deprecated_member_use
             color: Colors.grey.withOpacity(0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
@@ -55,6 +56,7 @@ class TodayAppointment extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
+                    // ignore: deprecated_member_use
                     color: Colors.blue.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(4),
                   ),

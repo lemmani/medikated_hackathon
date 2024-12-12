@@ -8,18 +8,18 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            const SearchHeader(),
-            const Expanded(
+            SearchHeader(),
+            Expanded(
               child: ServicesGrid(),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: CustomBottomNavBar(),
     );
   }
 }

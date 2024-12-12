@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medikated_hackathon/onboarding2/onboarding_screen.dart';
+
 
 class SignInButton extends StatelessWidget {
   const SignInButton({super.key});
@@ -10,7 +12,10 @@ class SignInButton extends StatelessWidget {
       height: 56,
       child: ElevatedButton(
         onPressed: () {
-          // Add sign in logic here
+           Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const OnboardingScreen()),
+                  );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue[700],
@@ -19,7 +24,7 @@ class SignInButton extends StatelessWidget {
           ),
         ),
         child: const Text(
-          'Sign In',
+          'Next',
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,

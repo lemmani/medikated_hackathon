@@ -49,7 +49,7 @@ class ProfileTile extends StatelessWidget {
     required this.title,
     required this.subtitle,
     this.trailing,
-    this.subtitleColor,
+    this.subtitleColor, required Null Function() onTap,
   });
 
   @override

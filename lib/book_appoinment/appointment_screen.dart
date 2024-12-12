@@ -4,6 +4,7 @@ import 'components/patient_selector.dart';
 import 'components/location_selector.dart';
 import 'components/visit_reason_grid.dart';
 import 'components/emergency_notice.dart';
+import '../types_of_doctors/doctor_directory_screen.dart';
 
 class AppointmentScreen extends StatelessWidget {
   const AppointmentScreen({super.key});
@@ -34,7 +35,13 @@ class AppointmentScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                              // Navigate to the AppointmentScreen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const DoctorDirectoryScreen  ()),
+                      );  
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                       padding: const EdgeInsets.symmetric(vertical: 16),

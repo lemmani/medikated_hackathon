@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../book_appoinment/appointment_screen.dart';  // Import your AppointmentScreen here
 
 class AppointmentsSection extends StatelessWidget {
   const AppointmentsSection({super.key});
@@ -19,30 +20,38 @@ class AppointmentsSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey.shade200),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: ListTile(
-              leading: Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.green.shade100,
-                  borderRadius: BorderRadius.circular(8),
+          GestureDetector(
+            onTap: () {
+              // Navigate to the AppointmentScreen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AppointmentScreen()),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade200),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: ListTile(
+                leading: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.green.shade100,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: const Icon(Icons.calendar_today, color: Colors.green),
                 ),
-                child: const Icon(Icons.calendar_today, color: Colors.green),
+                title: const Text(
+                  "You currently don't have an appointment scheduled.",
+                  style: TextStyle(fontSize: 14),
+                ),
+                subtitle: const Text(
+                  'Book an appointment today!',
+                  style: TextStyle(color: Colors.grey),
+                ),
+                trailing: const Icon(Icons.chevron_right),
               ),
-              title: const Text(
-                "You currently don't have an appointment scheduled.",
-                style: TextStyle(fontSize: 14),
-              ),
-              subtitle: const Text(
-                'Book an appointment today!',
-                style: TextStyle(color: Colors.grey),
-              ),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {},
             ),
           ),
         ],

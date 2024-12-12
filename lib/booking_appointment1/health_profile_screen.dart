@@ -3,6 +3,7 @@ import 'components/health_profile_header.dart';
 import 'components/duration_selector.dart';
 import 'components/symptoms_checklist.dart';
 import 'components/medication_section.dart';
+import '../booking_appointment2/review_profile_screen.dart';
 
 class HealthProfileScreen extends StatelessWidget {
   const HealthProfileScreen({super.key});
@@ -32,11 +33,11 @@ class HealthProfileScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: Color(0xFFFFEBEE),
+                          color: const Color(0xFFFFEBEE),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: Row(
-                          children: const [
+                        child: const Row(
+                          children: [
                             Icon(Icons.local_hospital, color: Colors.red),
                             SizedBox(width: 8),
                             Text(
@@ -59,7 +60,12 @@ class HealthProfileScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                              Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const ReviewProfileScreen  ()),
+                          ); 
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
                             padding: const EdgeInsets.symmetric(vertical: 16),

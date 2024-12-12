@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'custom_text_field.dart';
+import '../../home/home_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -89,7 +90,11 @@ class _LoginFormState extends State<LoginForm> {
           height: 56,
           child: ElevatedButton(
             onPressed: () {
-              // Add sign in logic
+              // Navigate to BasicInformationScreen when button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF0052CC),
@@ -97,11 +102,12 @@ class _LoginFormState extends State<LoginForm> {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
-            child: const Text(
+             child: const Text(
               'Sign In',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
             ),
           ),

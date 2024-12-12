@@ -5,10 +5,10 @@ class ServiceInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'SERVICE',
           style: TextStyle(
             color: Colors.grey,
@@ -16,9 +16,9 @@ class ServiceInfo extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: 12),
         Row(
-          children: const [
+          children: [
             Text(
               'Medical Officer',
               style: TextStyle(

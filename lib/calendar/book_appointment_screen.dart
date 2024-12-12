@@ -5,6 +5,7 @@ import 'components/service_info.dart';
 import 'components/date_time_selector.dart';
 import 'components/notes_section.dart';
 import 'components/attachments_section.dart';
+import '../booking_appointment1/health_profile_screen.dart';
 
 class BookAppointmentScreen extends StatelessWidget {
   const BookAppointmentScreen({super.key});
@@ -44,7 +45,12 @@ class BookAppointmentScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                                Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const HealthProfileScreen  ()),
+                          ); 
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blue,
                             padding: const EdgeInsets.symmetric(vertical: 16),

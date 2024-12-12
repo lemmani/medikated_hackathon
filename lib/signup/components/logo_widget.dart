@@ -8,7 +8,7 @@ class LogoWidget extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'assets/logo.png',
+          '/Users/emmanuelfrancislahai/Desktop/MEDIKATED_HACKATHON/medikated_hackathon/assets/images/medikated_logo.png',
           height: 80,
           width: 80,
         ),

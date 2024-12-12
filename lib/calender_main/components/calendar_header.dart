@@ -52,14 +52,14 @@ class CalendarHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Row(
+          const Row(
             children: [
-              const Icon(
+              Icon(
                 Icons.chevron_left,
                 color: Colors.grey,
               ),
-              const SizedBox(width: 8),
-              const Text(
+              SizedBox(width: 8),
+              Text(
                 'December, 2024',
                 style: TextStyle(
                   fontSize: 16,

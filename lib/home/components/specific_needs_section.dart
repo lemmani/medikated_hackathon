@@ -65,9 +65,9 @@ class SpecificNeedsSection extends StatelessWidget {
           const SizedBox(height: 16),
           TextButton(
             onPressed: () {},
-            child: Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
-              children: const [
+              children: [
                 Text(
                   'See more actions',
                   style: TextStyle(

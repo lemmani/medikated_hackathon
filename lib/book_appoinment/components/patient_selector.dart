@@ -20,7 +20,7 @@ class PatientSelector extends StatelessWidget {
               backgroundColor: Colors.blue,
               child: ClipOval(
                 child: Image.network(
-                  'https://via.placeholder.com/48',
+                  '/Users/emmanuelfrancislahai/Desktop/MEDIKATED_HACKATHON/medikated_hackathon/assets/images/Naso.png',
                   width: 48,
                   height: 48,
                   fit: BoxFit.cover,
